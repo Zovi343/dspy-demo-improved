@@ -104,9 +104,7 @@ def create_dspy_examples(
 
         # Create text input using the same logic as extract.py:157
         text = (
-            article["title"]
-            + "\n"
-            + extract_first_n_sentences(article["content"], num_sentences)
+            article["title"] + "\n" + extract_first_n_sentences(article["content"], num_sentences)
         )
 
         # Obtain the expected Pydantic model from gold data
@@ -126,7 +124,7 @@ def validate_answer(
     example: dspy.Example,
     pred: Merger | Acquisition | Other,
     trace=None,  # trace unused but required for DSPy
-):
+) -> float:
     """DSPy-compatible metric function for evaluating extraction results."""
     expected = example.expected_output
 
@@ -141,16 +139,61 @@ def validate_answer(
     pred_dict = pred.model_dump()
 
     # Calculate field-level accuracy
-    matches = [
-        metric(expected_dict[field], pred_dict[field]) for field in expected_dict
-    ]
+    matches = [metric(expected_dict[field], pred_dict[field]) for field in expected_dict]
 
     return sum(matches) / len(matches) if matches else 0.0
 
 
+def validate_answer_with_feedback(
+    example: dspy.Example,
+    pred: Merger | Acquisition | Other,
+    trace=None,
+    pred_name=None,
+    pred_trace=None,
+) -> dspy.Prediction:
+    """Metric for GEPA that mirrors validate_answer while emitting per-field feedback and score"""
+    expected = example.expected_output
+
+    # If incorrectly classified, score is instantly zero
+    if not isinstance(pred, type(expected)):
+        feedback = f"Article {example.article_id}): expected {type(expected).__name__}, got {type(pred).__name__}"
+        return dspy.Prediction(score=0.0, feedback=feedback)
+
+    # If other, no fields to compare, and score is 1.0
+    if isinstance(expected, Other):
+        feedback = f"✅ Article {example.article_id}): correctly classified as Other"
+        return dspy.Prediction(score=1.0, feedback=feedback)
+
+    # If the classification is not "Other", score on all model fields using Pydantic field info
+    expected_dict = expected.model_dump()
+    pred_dict = pred.model_dump()
+
+    scored_fields = 0
+    matches = 0
+
+    feedback = f"Feedback for Article {example.article_id}:\n"
+    for field, gold_value in expected_dict.items():
+        if field in ["article_id"]:
+            continue
+
+        predicted_value = pred_dict.get(field)
+        field_score = metric(gold_value, predicted_value)
+        scored_fields += 1
+        matches += field_score
+
+        if field_score:
+            feedback += f"  ✅ {field}: correctly extracted {gold_value!r}\n"
+        else:
+            feedback += "  ❌ " + f"{field}: expected {gold_value!r}, got {predicted_value!r}\n"
+
+    score = matches / scored_fields if scored_fields else 0.0
+
+    return dspy.Prediction(score=score, feedback=feedback)
+
+
 def run_evaluation(
     data_path: Path = Path("./data"),
-    limit: int = 2,
+    limit: int = 12,
     num_sentences: int = 5,
     num_threads: int = 1,
     optimized_module_path: str | None = None,
@@ -163,15 +206,11 @@ def run_evaluation(
     # Configure DSPy
     dspy.configure(lm=lm, adapter=BAMLAdapter())
 
-    # Create examples from gold data - filter to test set (13-22) by default
-    test_article_ids = list(range(13, 23))
-    examples = create_dspy_examples(
-        data_path, num_sentences, article_ids=test_article_ids
-    )
+    # Create examples from the held-out test set
+    test_article_ids = [17, 15, 18, 19, 16, 20, 22, 21, 28, 23]
+    examples = create_dspy_examples(data_path, num_sentences, article_ids=test_article_ids)
     examples = examples[:limit]
-    print(
-        f"\nLoaded {len(examples)} examples for evaluation (test set: articles 13-22)"
-    )
+    print(f"\nLoaded {len(examples)} examples for test set")
 
     # Initialize Extract module (base or optimized)
     extract_module = Extract()
@@ -202,9 +241,7 @@ def run_evaluation(
     import json
     import tempfile
 
-    with tempfile.NamedTemporaryFile(
-        mode="w", suffix=".json", delete=False
-    ) as temp_pred:
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as temp_pred:
         json.dump(predictions, temp_pred, indent=2)
         temp_pred_path = temp_pred.name
 
@@ -265,9 +302,7 @@ def evaluate_results(gold_file: str, result_file: str):
     total_correct = 0
 
     for field in all_fields:
-        field_accuracy, mismatches, field_scores = calculate_field_accuracy(
-            comparison_df, field
-        )
+        field_accuracy, mismatches, field_scores = calculate_field_accuracy(comparison_df, field)
 
         field_accuracies[field] = field_accuracy
         field_mismatches[field] = mismatches
@@ -278,16 +313,7 @@ def evaluate_results(gold_file: str, result_file: str):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        "Evaluate DSPy extraction system with mismatch analysis"
-    )
-    parser.add_argument(
-        "--limit",
-        "-l",
-        type=int,
-        default=1000,
-        help="Limit the number of examples to evaluate",
-    )
+    parser = argparse.ArgumentParser("Evaluate DSPy extraction system with mismatch analysis")
     parser.add_argument(
         "--data-path",
         "-d",
@@ -306,12 +332,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.module:
-        print(
-            f"Running DSPy evaluation with user-specified saved module: {args.module}"
-        )
+        print(f"Running DSPy evaluation with user-specified saved module: {args.module}")
 
     run_evaluation(
         data_path=args.data_path,
-        limit=args.limit,
         optimized_module_path=args.module,
     )

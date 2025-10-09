@@ -1,4 +1,3 @@
-import argparse
 import json
 import os
 import re
@@ -84,8 +83,10 @@ class Other(BaseModel):
 
 class ClassifyArticle(dspy.Signature):
     """
-    Analyze the following news article and classify it according to whether it's a "Merger" or "Acquisition".
-    If it mentions a potential or failed deal, classify it as "Other".
+    Analyze the news article and classify it as a merger or acquisition deal.
+    - A merger is when two companies combine to form a new entity.
+    - An acquisition is when one company takes over another.
+    - If it mentions a potential, rumored or failed deal, classify it as "Other".
     """
 
     text: str = dspy.InputField()
@@ -94,7 +95,8 @@ class ClassifyArticle(dspy.Signature):
 
 class ExtractMergerInfo(dspy.Signature):
     """
-    Extract merger information about companies from the given text.
+    Extract information about companies involved in a merger deal.
+    - If the currency symbol is just "$", assume USD.
     """
 
     text: str = dspy.InputField()
@@ -103,7 +105,8 @@ class ExtractMergerInfo(dspy.Signature):
 
 class ExtractAcquisitionInfo(dspy.Signature):
     """
-    Extract acquisition information about companies from the given text.
+    Extract information about companies involved in an acquisition deal.
+    - If the currency symbol is just "$", assume USD.
     """
 
     text: str = dspy.InputField()
@@ -139,13 +142,14 @@ class Extract(dspy.Module):
             return Other(article_id=article_id, article_type="other")
 
 
-def run_sync(data_path: Path, limit: int) -> None:
+def run_sync(data_path: Path, article_ids: list[int]) -> None:
     articles = read_data(data_path / "articles.json")
+
     extract = Extract()
     output = []
-    for article in articles[:limit]:
+    for article_id in article_ids:
+        article = articles[article_id]
         # Combine the title and the content's first n sentences
-        article_id = article["id"]
         text = article["title"] + extract_first_n_sentences(article["content"], 5)
         result = extract(text=text, article_id=article_id)
         final_result = result.model_dump()
@@ -159,11 +163,10 @@ def run_sync(data_path: Path, limit: int) -> None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--limit", "-l", type=int, default=1000, help="Number of articles to process"
-    )
-    args = parser.parse_args()
+    # Test set article IDs
+    # We'll evaluate only on the test set for a fair comparison with the optimized programs downstream
+    article_ids = [17, 15, 18, 19, 16, 20, 22, 21, 28, 23]
 
     data_path = Path("./data")
-    run_sync(data_path, limit=args.limit)
+    print("Running extraction on test set...")
+    run_sync(data_path, article_ids=article_ids)
