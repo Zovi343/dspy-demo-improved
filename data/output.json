@@ -1,193 +1,6 @@
 [
   {
-    "article_id": 1,
-    "company_1": "Sayona Mining",
-    "company_1_ticker": [
-      "ASX"
-    ],
-    "company_2": "Piedmont Lithium",
-    "company_2_ticker": [],
-    "merged_entity": "Elevra Lithium",
-    "deal_amount": null,
-    "deal_currency": "Unknown",
-    "article_type": "merger"
-  },
-  {
-    "article_id": 2,
-    "parent_company": "Newcrest Mining",
-    "parent_company_ticker": null,
-    "child_company": "Pretium Resources",
-    "child_company_ticker": null,
-    "deal_amount": "2.8",
-    "deal_currency": "USD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 3,
-    "parent_company": "Gold Fields",
-    "parent_company_ticker": null,
-    "child_company": "Gold Road Resources",
-    "child_company_ticker": null,
-    "deal_amount": "3.3",
-    "deal_currency": "USD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 4,
-    "company_1": "Karora Resources",
-    "company_1_ticker": null,
-    "company_2": "Westgold Resources",
-    "company_2_ticker": null,
-    "merged_entity": "Westgold",
-    "deal_amount": "3.4",
-    "deal_currency": "CAD",
-    "article_type": "merger"
-  },
-  {
-    "article_id": 5,
-    "parent_company": "Ramelius Resources",
-    "parent_company_ticker": null,
-    "child_company": "Spartan Resources",
-    "child_company_ticker": null,
-    "deal_amount": "2.4",
-    "deal_currency": "AUD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 6,
-    "parent_company": "Northern Star Resources",
-    "parent_company_ticker": null,
-    "child_company": "De Grey Mining",
-    "child_company_ticker": null,
-    "deal_amount": "5",
-    "deal_currency": "AUD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 7,
-    "parent_company": "Rio Tinto",
-    "parent_company_ticker": null,
-    "child_company": "Arcadium Lithium",
-    "child_company_ticker": [
-      "AS",
-      "NYSE"
-    ],
-    "deal_amount": "6.7",
-    "deal_currency": "USD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 8,
-    "parent_company": "Pilbara Minerals",
-    "parent_company_ticker": null,
-    "child_company": null,
-    "child_company_ticker": null,
-    "deal_amount": null,
-    "deal_currency": "Unknown",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 9,
-    "company_1": "Equinox Gold",
-    "company_1_ticker": [
-      "EQX"
-    ],
-    "company_2": "Calibre Mining",
-    "company_2_ticker": [
-      "CXB"
-    ],
-    "merged_entity": null,
-    "deal_amount": "2.56B",
-    "deal_currency": "CAD",
-    "article_type": "merger"
-  },
-  {
-    "article_id": 10,
-    "parent_company": "Newmont",
-    "parent_company_ticker": null,
-    "child_company": "Newcrest Mining Limited",
-    "child_company_ticker": null,
-    "deal_amount": null,
-    "deal_currency": "Unknown",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 11,
-    "parent_company": "Pilbara Minerals",
-    "parent_company_ticker": [
-      "ASX:PLS"
-    ],
-    "child_company": "Latin Resources",
-    "child_company_ticker": [
-      "ASX:LRS"
-    ],
-    "deal_amount": null,
-    "deal_currency": "Unknown",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 12,
-    "company_1": "Rock Tech Lithium",
-    "company_1_ticker": null,
-    "company_2": "Arcore",
-    "company_2_ticker": null,
-    "merged_entity": "NewCo",
-    "deal_amount": null,
-    "deal_currency": "Unknown",
-    "article_type": "merger"
-  },
-  {
-    "article_id": 13,
-    "parent_company": "Titanium Corp",
-    "parent_company_ticker": [
-      "TSX:TCP"
-    ],
-    "child_company": "Azure Mining",
-    "child_company_ticker": [
-      "TSX: AZM",
-      "NYSE-A: AZZ"
-    ],
-    "deal_amount": "4.2",
-    "deal_currency": "CAD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 14,
-    "company_1": "Phoenix Resources",
-    "company_1_ticker": null,
-    "company_2": "Quantum Mining",
-    "company_2_ticker": null,
-    "merged_entity": "Phoenix Resources",
-    "deal_amount": "2.8",
-    "deal_currency": "AUD",
-    "article_type": "merger"
-  },
-  {
-    "article_id": 15,
-    "parent_company": "Apex Resources",
-    "parent_company_ticker": null,
-    "child_company": "Summit Mining",
-    "child_company_ticker": null,
-    "deal_amount": "1.9bn",
-    "deal_currency": "USD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 16,
-    "article_type": "other"
-  },
-  {
     "article_id": 17,
-    "parent_company": "European Wave Mining",
-    "parent_company_ticker": null,
-    "child_company": "Silverstone Resources",
-    "child_company_ticker": null,
-    "deal_amount": "3.6",
-    "deal_currency": "CAD",
-    "article_type": "acquisition"
-  },
-  {
-    "article_id": 18,
     "company_1": "Copper Valley Mining",
     "company_1_ticker": [
       "CVMI"
@@ -202,7 +15,11 @@
     "article_type": "merger"
   },
   {
-    "article_id": 19,
+    "article_id": 15,
+    "article_type": "other"
+  },
+  {
+    "article_id": 18,
     "parent_company": "Global Resources Corporation",
     "parent_company_ticker": null,
     "child_company": "Frontier Mining Limited",
@@ -212,7 +29,7 @@
     "article_type": "acquisition"
   },
   {
-    "article_id": 20,
+    "article_id": 19,
     "company_1": "Atlas Mining Corporation",
     "company_1_ticker": null,
     "company_2": "Pacific Metals",
@@ -223,7 +40,17 @@
     "article_type": "merger"
   },
   {
-    "article_id": 21,
+    "article_id": 16,
+    "parent_company": "European Wave Mining",
+    "parent_company_ticker": null,
+    "child_company": "Silverstone Resources",
+    "child_company_ticker": null,
+    "deal_amount": "3.6",
+    "deal_currency": "CAD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 20,
     "parent_company": "Sterling Resources",
     "parent_company_ticker": null,
     "child_company": "Cobalt Corp",
@@ -234,11 +61,46 @@
   },
   {
     "article_id": 22,
+    "parent_company": "Northern Horizon Mining",
+    "parent_company_ticker": null,
+    "child_company": "Pacific Ridge Lithium",
+    "child_company_ticker": null,
+    "deal_amount": "620 million",
+    "deal_currency": "CAD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 21,
     "parent_company": "Dynasty Mining",
     "parent_company_ticker": null,
     "child_company": "Explorer Resources",
     "child_company_ticker": null,
     "deal_amount": "1.8",
+    "deal_currency": "AUD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 28,
+    "company_1": "Sahara Copper",
+    "company_1_ticker": null,
+    "company_2": "Red Dune Metals Ltd.",
+    "company_2_ticker": null,
+    "merged_entity": "Sahara Dune Metals",
+    "deal_amount": "950 million",
+    "deal_currency": "USD",
+    "article_type": "merger"
+  },
+  {
+    "article_id": 23,
+    "parent_company": "Atlas Ironworks",
+    "parent_company_ticker": [
+      "AIW"
+    ],
+    "child_company": "Desert Edge Minerals",
+    "child_company_ticker": [
+      "EDG"
+    ],
+    "deal_amount": "850 million",
     "deal_currency": "AUD",
     "article_type": "acquisition"
   }

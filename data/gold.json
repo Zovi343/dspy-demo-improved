@@ -2,7 +2,7 @@
   {
     "article_id": 1,
     "company_1": "Sayona Mining",
-    "company_1_ticker": [],
+    "company_1_ticker": null,
     "company_2": "Piedmont Lithium",
     "company_2_ticker": null,
     "merged_entity": "Elevra Lithium",
@@ -27,9 +27,9 @@
   {
     "article_id": 4,
     "company_1": "Karora Resources",
-    "company_1_ticker": [],
+    "company_1_ticker": null,
     "company_2": "Westgold",
-    "company_2_ticker": [],
+    "company_2_ticker": null,
     "merged_entity": null,
     "deal_amount": "3.4 billion",
     "deal_currency": "USD",
@@ -38,9 +38,9 @@
   {
     "article_id": 5,
     "parent_company": "Ramelius Resources",
-    "parent_company_ticker": [],
+    "parent_company_ticker": null,
     "child_company": "Spartan Resources",
-    "child_company_ticker": [],
+    "child_company_ticker": null,
     "deal_amount": "2.4 billion",
     "deal_currency": "USD",
     "article_type": "acquisition"
@@ -48,9 +48,9 @@
   {
     "article_id": 6,
     "parent_company": "Northern Star Resources",
-    "parent_company_ticker": [],
+    "parent_company_ticker": null,
     "child_company": "De Grey Mining",
-    "child_company_ticker": [],
+    "child_company_ticker": null,
     "deal_amount": "5 billion",
     "deal_currency": "USD",
     "article_type": "acquisition"
@@ -60,10 +60,7 @@
     "parent_company": "Rio Tinto",
     "parent_company_ticker": null,
     "child_company": "Arcadium Lithium",
-    "child_company_ticker": [
-      "ASX",
-      "New York Stock Exchange"
-    ],
+    "child_company_ticker": null,
     "deal_amount": "6.7 billion",
     "deal_currency": "USD",
     "article_type": "acquisition"
@@ -76,12 +73,12 @@
     "article_id": 9,
     "company_1": "Equinox Gold",
     "company_1_ticker": [
-      "TSX: EQX",
-      "NYSE-A: EQX"
+      "TSX:EQX",
+      "NYSE-A:EQX"
     ],
     "company_2": "Calibre Mining",
     "company_2_ticker": [
-      "TSX: CXB"
+      "TSX:CXB"
     ],
     "merged_entity": "Equinox Gold",
     "deal_amount": "$2.56 billion",
@@ -91,7 +88,7 @@
   {
     "article_id": 10,
     "parent_company": "Newmont",
-    "parent_company_ticker": [],
+    "parent_company_ticker": null,
     "child_company": "Newcrest Mining Limited",
     "child_company_ticker": null,
     "deal_amount": null,
@@ -115,9 +112,9 @@
   {
     "article_id": 12,
     "company_1": "Rock Tech Lithium",
-    "company_1_ticker": [],
+    "company_1_ticker": null,
     "company_2": "Arcore",
-    "company_2_ticker": [],
+    "company_2_ticker": null,
     "merged_entity": "NewCo",
     "deal_amount": null,
     "deal_currency": "Unknown",
@@ -126,9 +123,9 @@
   {
     "article_id": 13,
     "parent_company": "Titanium Corp",
-    "parent_company_ticker": ["TSX: TCP"],
+    "parent_company_ticker": ["TSX:TCP"],
     "child_company": "Azure Mining",
-    "child_company_ticker": ["TSX: AZM", "NYSE-A: AZZ"],
+    "child_company_ticker": ["TSX:AZM", "NYSE-A:AZZ"],
     "deal_amount": "4.2 billion",
     "deal_currency": "CAD",
     "article_type": "acquisition"
@@ -165,9 +162,9 @@
   {
     "article_id": 18,
     "company_1": "Copper Valley Mining",
-    "company_1_ticker": ["NYSE-A: CVMI"],
+    "company_1_ticker": ["NYSE-A:CVMI"],
     "company_2": "Mountain Ridge Resources",
-    "company_2_ticker": ["NYSE-A: MORR"],
+    "company_2_ticker": ["NYSE-A:MORR"],
     "merged_entity": "Valley Ridge Mining",
     "deal_amount": "1.5 billion",
     "deal_currency": "USD",
@@ -201,11 +198,140 @@
   {
     "article_id": 22,
     "parent_company": "Dynasty Mining",
-    "parent_company_ticker": [],
+    "parent_company_ticker": null,
     "child_company": "Explorer Resources",
-    "child_company_ticker": [],
+    "child_company_ticker": null,
     "deal_amount": "1.8 billion",
     "deal_currency": "AUD",
     "article_type": "acquisition"
+  },
+  {
+    "article_id": 23,
+    "parent_company": "Northern Horizon Mining",
+    "parent_company_ticker": null,
+    "child_company": "Pacific Ridge Lithium",
+    "child_company_ticker": null,
+    "deal_amount": "620 million",
+    "deal_currency": "CAD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 24,
+    "parent_company": "Atlas Ironworks",
+    "parent_company_ticker": [
+      "ASX:AIW"
+    ],
+    "child_company": "Desert Edge Minerals",
+    "child_company_ticker": [
+      "AXS:EDG"
+    ],
+    "deal_amount": "850 million",
+    "deal_currency": "AUD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 25,
+    "parent_company": "Greenstone Metals",
+    "parent_company_ticker": null,
+    "child_company": "Andes Graphite",
+    "child_company_ticker": null,
+    "deal_amount": "410 million",
+    "deal_currency": "USD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 26,
+    "parent_company": "Aurora Rare Earths",
+    "parent_company_ticker": null,
+    "child_company": "Polar Star Mining",
+    "child_company_ticker": null,
+    "deal_amount": "275 million",
+    "deal_currency": "USD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 27,
+    "parent_company": "Blue Canyon Coal",
+    "parent_company_ticker": null,
+    "child_company": "Highland Basin Resources",
+    "child_company_ticker": null,
+    "deal_amount": "275 million",
+    "deal_currency": "USD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 28,
+    "company_1": "Frontier Nickel Inc.",
+    "company_1_ticker": null,
+    "company_2": "Arctic Alloy",
+    "company_2_ticker": null,
+    "merged_entity": "Polar Frontier Metals",
+    "deal_amount": "2.1 billion",
+    "deal_currency": "USD",
+    "article_type": "merger"
+  },
+  {
+    "article_id": 29,
+    "company_1": "Sahara Copper",
+    "company_1_ticker": null,
+    "company_2": "Red Dune Metals Ltd.",
+    "company_2_ticker": null,
+    "merged_entity": "Sahara Dune Metals",
+    "deal_amount": "950 million",
+    "deal_currency": "USD",
+    "article_type": "merger"
+  },
+  {
+    "article_id": 30,
+    "company_1": "Summit Platinum Corp.",
+    "company_1_ticker": null,
+    "company_2": "Nova PGM Ltd.",
+    "company_2_ticker": null,
+    "merged_entity": "Summit Nova Metals",
+    "deal_amount": "1.3 billion",
+    "deal_currency": "USD",
+    "article_type": "merger"
+  },
+  {
+    "article_id": 31,
+    "company_1": "Baltic Iron Ore AB",
+    "company_1_ticker": null,
+    "company_2": "FerroNordic Resources ASA",
+    "company_2_ticker": null,
+    "merged_entity": null,
+    "deal_amount": null,
+    "deal_currency": "Unknown",
+    "article_type": "merger"
+  },
+  {
+    "article_id": 32,
+    "company_1": "Cordillera Gold Corp.",
+    "company_1_ticker": null,
+    "company_2": "Andean Metallics SA",
+    "company_2_ticker": null,
+    "merged_entity": null,
+    "deal_amount": "780 million",
+    "deal_currency": "CAD",
+    "article_type": "merger"
+  },
+  {
+    "article_id": 33,
+    "article_type": "other"
+  },
+  {
+    "article_id": 34,
+    "article_type": "other"
+  },
+  {
+    "article_id": 35,
+    "article_type": "other"
+  },
+  {
+    "article_id": 36,
+    "article_type": "other"
+  },
+  {
+    "article_id": 37,
+    "article_type": "other"
   }
 ]
