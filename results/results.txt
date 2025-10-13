@@ -1,0 +1,53 @@
+## Baseline
+
+----------------------------------------
+Mismatches 
+----------------------------------------
+article_type              ❌ Article IDs: [15]
+child_company             ❌ Article IDs: [15]
+child_company_ticker      ✅ (no mismatches)
+company_1                 ✅ (no mismatches)
+company_1_ticker          ❌ Article IDs: [18]
+company_2                 ✅ (no mismatches)
+company_2_ticker          ❌ Article IDs: [18]
+deal_amount               ❌ Article IDs: [15, 17, 18, 19, 20, 22, 28]
+deal_currency             ❌ Article IDs: [15]
+merged_entity             ✅ (no mismatches)
+parent_company            ❌ Article IDs: [15]
+parent_company_ticker     ✅ (no mismatches)
+
+## Bootstrap Fewshot
+
+----------------------------------------
+Mismatches 
+----------------------------------------
+article_type              ✅ (no mismatches)
+child_company             ✅ (no mismatches)
+child_company_ticker      ✅ (no mismatches)
+company_1                 ✅ (no mismatches)
+company_1_ticker          ❌ Article IDs: [18]
+company_2                 ✅ (no mismatches)
+company_2_ticker          ❌ Article IDs: [18]
+deal_amount               ❌ Article IDs: [17, 18, 19, 20, 22, 28]
+deal_currency             ✅ (no mismatches)
+merged_entity             ✅ (no mismatches)
+parent_company            ✅ (no mismatches)
+parent_company_ticker     ✅ (no mismatches)
+
+## GEPA
+
+----------------------------------------
+Mismatches 
+----------------------------------------
+article_type              ✅ (no mismatches)
+child_company             ✅ (no mismatches)
+child_company_ticker      ✅ (no mismatches)
+company_1                 ✅ (no mismatches)
+company_1_ticker          ❌ Article IDs: [18]
+company_2                 ✅ (no mismatches)
+company_2_ticker          ❌ Article IDs: [18]
+deal_amount               ✅ (no mismatches)
+deal_currency             ✅ (no mismatches)
+merged_entity             ✅ (no mismatches)
+parent_company            ✅ (no mismatches)
+parent_company_ticker     ✅ (no mismatches)
