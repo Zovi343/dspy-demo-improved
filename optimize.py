@@ -6,23 +6,21 @@ from dspy.adapters.baml_adapter import BAMLAdapter
 from evaluate import create_dspy_examples, validate_answer
 from extract import Extract
 
-# Using OpenRouter. Switch to another LLM provider as needed
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+from dotenv import load_dotenv
+
+load_dotenv()
 
 teacher_lm = dspy.LM(
-    model="openrouter/google/gemini-2.5-flash",
-    api_base="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
+    "openai/gpt-4.1",
     max_tokens=16_000,
 )
 
 student_lm = dspy.LM(
-    model="openrouter/google/gemini-2.5-flash-lite",
-    api_base="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
+    "openai/gpt-4.1-mini",
     max_tokens=16_000,
 )
-dspy.configure(lm=student_lm, adapter=BAMLAdapter())
+
+dspy.configure(lm=student_lm, adapter=BAMLAdapter()) # type: ignore
 
 # Start with baseline module
 baseline_extract = Extract()

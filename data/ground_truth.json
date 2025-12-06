@@ -333,5 +333,30 @@
   {
     "article_id": 37,
     "article_type": "other"
+  },
+  {
+    "article_id": 38,
+    "parent_company": "Zenith Copper Corp.",
+    "parent_company_ticker": ["TSX:ZCC"],
+    "child_company": "Andean Metals S.A.",
+    "child_company_ticker": null,
+    "deal_amount": "1.4 billion",
+    "deal_currency": "USD",
+    "article_type": "acquisition"
+  },
+  {
+    "article_id": 39,
+    "company_1": "Tundra Gold Inc.",
+    "company_1_ticker": ["TSXV:TGI"],
+    "company_2": "Boreal Mining Ltd.",
+    "company_2_ticker": ["TSXV:BML"],
+    "merged_entity": "Northern Tundra Resources",
+    "deal_amount": "540 million",
+    "deal_currency": "CAD",
+    "article_type": "merger"
+  },
+  {
+    "article_id": 40,
+    "article_type": "other"
   }
 ]

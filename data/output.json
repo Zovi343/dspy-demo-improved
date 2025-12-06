@@ -10,7 +10,7 @@
       "MORR"
     ],
     "merged_entity": "Valley Ridge Mining",
-    "deal_amount": "1.5",
+    "deal_amount": "1.5 billion",
     "deal_currency": "USD",
     "article_type": "merger"
   },
@@ -24,7 +24,7 @@
     "parent_company_ticker": null,
     "child_company": "Frontier Mining Limited",
     "child_company_ticker": null,
-    "deal_amount": "920000000",
+    "deal_amount": "920 million",
     "deal_currency": "USD",
     "article_type": "acquisition"
   },
@@ -35,7 +35,7 @@
     "company_2": "Pacific Metals",
     "company_2_ticker": null,
     "merged_entity": "Atlas Pacific Mining",
-    "deal_amount": "3.1",
+    "deal_amount": "3.1 billion",
     "deal_currency": "USD",
     "article_type": "merger"
   },
@@ -45,19 +45,13 @@
     "parent_company_ticker": null,
     "child_company": "Silverstone Resources",
     "child_company_ticker": null,
-    "deal_amount": "3.6",
+    "deal_amount": "3.6 billion",
     "deal_currency": "CAD",
     "article_type": "acquisition"
   },
   {
     "article_id": 20,
-    "parent_company": "Sterling Resources",
-    "parent_company_ticker": null,
-    "child_company": "Cobalt Corp",
-    "child_company_ticker": null,
-    "deal_amount": "2.7 billion",
-    "deal_currency": "USD",
-    "article_type": "acquisition"
+    "article_type": "other"
   },
   {
     "article_id": 22,
@@ -75,7 +69,7 @@
     "parent_company_ticker": null,
     "child_company": "Explorer Resources",
     "child_company_ticker": null,
-    "deal_amount": "1.8",
+    "deal_amount": "1.8 billion",
     "deal_currency": "AUD",
     "article_type": "acquisition"
   },
@@ -94,11 +88,11 @@
     "article_id": 23,
     "parent_company": "Atlas Ironworks",
     "parent_company_ticker": [
-      "AIW"
+      "ASX:AIW"
     ],
     "child_company": "Desert Edge Minerals",
     "child_company_ticker": [
-      "EDG"
+      "ASX:EDG"
     ],
     "deal_amount": "850 million",
     "deal_currency": "AUD",

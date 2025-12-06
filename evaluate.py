@@ -71,7 +71,7 @@ def create_dspy_examples(
     data_path: Path = Path("./data"),
     num_sentences: int = 5,
     article_ids: list[int] | None = None,
-):
+) -> list[dspy.Example]:
     """
     Create dspy.Example objects from articles.json and gold.json.
 
@@ -90,7 +90,7 @@ def create_dspy_examples(
     # Create a mapping from article_id to gold data for quick lookup
     gold_by_id = {item["article_id"]: item for item in gold_data}
 
-    examples = []
+    examples: list[dspy.Example] = []
     for article in articles:
         article_id = article["id"]
 
@@ -112,7 +112,7 @@ def create_dspy_examples(
 
         # Create dspy.Example with inputs marked
         example = dspy.Example(
-            text=text, article_id=article_id, expected_output=expected_output
+            text=text, article_id=article_id, expected_output=expected_output # type: ignore
         ).with_inputs("text", "article_id")
 
         examples.append(example)
@@ -123,19 +123,19 @@ def create_dspy_examples(
 def validate_answer(
     example: dspy.Example,
     pred: Merger | Acquisition | Other,
-    trace=None,  # trace unused but required for DSPy
+    trace=None, # type: ignore # trace unused but required for DSPy
 ) -> float:
     """DSPy-compatible metric function for evaluating extraction results."""
-    expected = example.expected_output
+    expected : Merger | Acquisition | Other = example.expected_output # type: ignore
 
     # Type mismatch or Other type handling
-    if not isinstance(pred, type(expected)):
+    if not isinstance(pred, type(expected)): # type: ignore
         return 0.0
     if isinstance(expected, Other):
         return 1.0
 
     # Compare all model fields using Pydantic's field info
-    expected_dict = expected.model_dump()
+    expected_dict = expected.model_dump() # type: ignore
     pred_dict = pred.model_dump()
 
     # Calculate field-level accuracy

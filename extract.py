@@ -3,6 +3,7 @@ import os
 import re
 from pathlib import Path
 from typing import Literal
+from typing import Any
 
 import dspy
 from dotenv import load_dotenv
@@ -11,18 +12,14 @@ from pydantic import BaseModel, Field
 
 load_dotenv()
 
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
-
-# Using OpenRouter. Switch to another LLM provider as needed
 lm = dspy.LM(
-    model="openrouter/google/gemini-2.5-flash-lite",
-    api_base="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
+    "openai/gpt-4.1-mini",
+    max_tokens=16_000,
 )
 dspy.configure(lm=lm, adapter=BAMLAdapter())
 
 
-def read_data(path: Path) -> list[dict]:
+def read_data(path: Path) -> list[dict[str, Any]]:
     with open(path, "r") as f:
         return json.load(f)
 

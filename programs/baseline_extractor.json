@@ -1,0 +1,66 @@
+{
+  "classifier": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Analyze the news article and classify it as a merger or acquisition deal.\n- A merger is when two companies combine to form a new entity.\n- An acquisition is when one company takes over another.\n- If it mentions a potential, rumored or failed deal, classify it as \"Other\".",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Article Type:",
+          "description": "${article_type}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "merger_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Extract information about companies involved in a merger deal.\n- If the currency symbol is just \"$\", assume USD.",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Merger Info:",
+          "description": "${merger_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "acquisition_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Extract information about companies involved in an acquisition deal.\n- If the currency symbol is just \"$\", assume USD.",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Acquisition Info:",
+          "description": "${acquisition_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.4b1",
+      "cloudpickle": "3.1"
+    }
+  }
+}
