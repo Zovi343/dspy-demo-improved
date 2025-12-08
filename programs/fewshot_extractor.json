@@ -1,0 +1,318 @@
+{
+  "classifier": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "Zenith Copper closes $1.4bn takeover of Andean Metals\nZenith Copper Corp. (TSX:ZCC) has finalized its acquisition of Andean Metals S.A. for $1.4 billion in cash and stock. The transaction, first announced in December 2023, adds two producing copper-molybdenum mines in Peru to Zenith's South American portfolio. Andean shareholders received $7.25 per share, a 28% premium to the undisturbed share price..",
+        "article_type": "acquisition"
+      },
+      {
+        "augmented": true,
+        "text": "Cordillera Gold and Rocky Core Metallics merge to build combined bullion platform\nCordillera Gold Corp. and Rocky Core Metallics will merge in a C$780 million stock-and-warrant transaction focused on Canadian precious metals. The company formed plans to integrate processing between Cordillera's Alberta gold mines and Rocky Core's polymetallic mill in northern Canada. Management expects the merger to increase annual gold equivalent output to 620,000 ounces within two years. The companies aim to close the deal in the second half of 2025 subject to customary approvals...",
+        "article_type": "merger"
+      },
+      {
+        "augmented": true,
+        "text": "Greenstone Metals completes purchase of Andes Graphite\nGreenstone Metals has acquired Chilean graphite developer Andes Graphite in an all-stock transaction valued at $410 mn. The acquisition secures Greenstone a high-grade flake graphite project with proven reserves near Copiapó. Greenstone plans to fast-track a modular processing plant to supply battery anode producers in 2026. The company said the deal aligns with its strategy to expand critical minerals output in South America...",
+        "article_type": "acquisition"
+      },
+      {
+        "augmented": true,
+        "text": "Meet the world’s third largest lithium supplier\nRio Tinto has finalised its $US6.7 billion ($10.5 billion) acquisition of Arcadium Lithium, positioning the company as a leading lithium supplier. Following approval from the Royal Court of Jersey, Rio Tinto is now the parent company of Arcadium, which will be renamed to Rio Tinto Lithium. Arcadium has been delisted from the ASX and New York Stock Exchange. Backed by one of the world’s largest lithium resource bases, Rio Tinto Lithium aims to grow the capacity of its Tier 1 assets to over 200,000 tonnes of lithium carbonate equivalent per annum by 2028. “Today we are delighted to welcome the employees of Arcadium to Rio Tinto,” Rio Tinto chief executive officer Jakob Stausholm said..",
+        "article_type": "acquisition"
+      },
+      {
+        "augmented": true,
+        "text": "Sterling Resources acquisition of Cobalt Corp collapses after board veto\nThe proposed $2.7 billion acquisition of Cobalt Corp by Sterling Resources has collapsed after a single board member exercised veto rights at the final approval meeting. The deal had received regulatory clearance and shareholder approval from both companies, with closing scheduled for this week. Cobalt Corp director Sarah Mitchell cited concerns over Sterling's debt levels and future cobalt market conditions as reasons for her decisive vote. Sterling Resources shares fell 12% in after-hours trading following the announcement of the deal's termination...",
+        "article_type": "other"
+      },
+      {
+        "text": "Ironclad Minerals drops pursuit of Coppercrest Resources\nIronclad Minerals has shelved its proposed takeover of Coppercrest Resources after due diligence revealed escalating remediation liabilities. The companies had been in exclusive negotiations since February but failed to agree on revised terms. Ironclad executives said they will instead redirect capital toward organic mine expansions in Western Australia. Coppercrest shares fell 9% on the news as investors reassessed the standalone turnaround plan..",
+        "article_id": 33,
+        "expected_output": {
+          "article_id": 33,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Phoenix Resources and Quantum Mining to merge in A$2.8bn deal\nPhoenix Resources and Quantum Mining have agreed to merge in an all-stock transaction valued at approximately A$2.8 billion. Under the terms of the agreement, Quantum shareholders will receive 0.42 Phoenix shares for each Quantum share held. The combined entity will operate under the Phoenix Resources name and become the third-largest gold producer in Australia. Both companies' boards have unanimously approved the merger, which is expected to close in the first quarter of 2024..",
+        "article_id": 14,
+        "expected_output": {
+          "article_id": 14,
+          "company_1": "Phoenix Resources",
+          "company_1_ticker": null,
+          "company_2": "Quantum Mining",
+          "company_2_ticker": null,
+          "merged_entity": "Phoenix Resources",
+          "deal_amount": "2.8 billion",
+          "deal_currency": "AUD",
+          "article_type": "merger"
+        }
+      },
+      {
+        "text": "Geopolitical tensions stall Arctic Metals' Greenland partnership talks\nArctic Metals confirmed that talks with a European defense consortium about co-developing the Nuuk rare earth district have paused amid NATO sanctions deliberations. The parties had exchanged draft memoranda of understanding but never reached exclusivity. Company officials stated they remain open to future collaboration once policy clarity returns. Industry observers caution that any renewed dialogue could take months to restart..",
+        "article_id": 36,
+        "expected_output": {
+          "article_id": 36,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Summit Mining rejects Apex Resources' $1.9bn takeover offer\nSummit Mining has rejected an unsolicited takeover proposal from Apex Resources worth $1.9 billion. The offer of $3.20 per share was deemed to significantly undervalue Summit's lithium assets in Western Australia, according to the company's board. Summit Mining chairman David Chen stated that the proposal fails to reflect the strategic value of the company's flagship Pinnacle lithium project. Apex Resources has indicated it may pursue a hostile takeover if Summit continues to reject negotiations..",
+        "article_id": 15,
+        "expected_output": {
+          "article_id": 15,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Rock Tech, Arcore to merge subsidiaries to form integrated lithium company\nCanadian miner Rock Tech Lithium has signed a binding business combination agreement with Swiss junior mining company Arcore to merge their subsidiaries and establish a new European entity named NewCo. Upon completion of the transaction, Rock Tech will transfer the shares of its fully owned subsidiary, Rock Tech Guben, to NewCo in exchange for a 75% stake in NewCo’s registered share capital. Arcore will contribute the shares of its wholly owned subsidiary, AR CORE, to NewCo and receive a 25% stake in NewCo’s registered share capital. This strategic move aims to reduce Europe’s dependence on other regions for critical battery raw materials and create a reliable battery materials supply chain. NewCo’s core assets will include Rock Tech’s fully permitted lithium converter in Guben, Germany, and Arcore’s lithium-boron-magnesium mining project in Lopare, Bosnia-Herzegovina, which contains an estimated 600,000 tonnes of lithium carbonate equivalent.",
+        "article_id": 12,
+        "expected_output": {
+          "article_id": 12,
+          "company_1": "Rock Tech Lithium",
+          "company_1_ticker": null,
+          "company_2": "Arcore",
+          "company_2_ticker": null,
+          "merged_entity": "NewCo",
+          "deal_amount": null,
+          "deal_currency": "Unknown",
+          "article_type": "merger"
+        }
+      }
+    ],
+    "signature": {
+      "instructions": "Analyze the news article and classify it as a merger or acquisition deal.\n- A merger is when two companies combine to form a new entity.\n- An acquisition is when one company takes over another.\n- If it mentions a potential, rumored or failed deal, classify it as \"Other\".",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Article Type:",
+          "description": "${article_type}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "merger_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "Cordillera Gold and Rocky Core Metallics merge to build combined bullion platform\nCordillera Gold Corp. and Rocky Core Metallics will merge in a C$780 million stock-and-warrant transaction focused on Canadian precious metals. The company formed plans to integrate processing between Cordillera's Alberta gold mines and Rocky Core's polymetallic mill in northern Canada. Management expects the merger to increase annual gold equivalent output to 620,000 ounces within two years. The companies aim to close the deal in the second half of 2025 subject to customary approvals..",
+        "merger_info": {
+          "article_id": 32,
+          "company_1": "Cordillera Gold Corp.",
+          "company_1_ticker": null,
+          "company_2": "Rocky Core Metallics",
+          "company_2_ticker": null,
+          "merged_entity": null,
+          "deal_amount": "780 million",
+          "deal_currency": "CAD",
+          "article_type": "merger"
+        }
+      },
+      {
+        "text": "Geopolitical tensions stall Arctic Metals' Greenland partnership talks\nArctic Metals confirmed that talks with a European defense consortium about co-developing the Nuuk rare earth district have paused amid NATO sanctions deliberations. The parties had exchanged draft memoranda of understanding but never reached exclusivity. Company officials stated they remain open to future collaboration once policy clarity returns. Industry observers caution that any renewed dialogue could take months to restart..",
+        "article_id": 36,
+        "expected_output": {
+          "article_id": 36,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Summit Mining rejects Apex Resources' $1.9bn takeover offer\nSummit Mining has rejected an unsolicited takeover proposal from Apex Resources worth $1.9 billion. The offer of $3.20 per share was deemed to significantly undervalue Summit's lithium assets in Western Australia, according to the company's board. Summit Mining chairman David Chen stated that the proposal fails to reflect the strategic value of the company's flagship Pinnacle lithium project. Apex Resources has indicated it may pursue a hostile takeover if Summit continues to reject negotiations..",
+        "article_id": 15,
+        "expected_output": {
+          "article_id": 15,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Phoenix Resources and Quantum Mining to merge in A$2.8bn deal\nPhoenix Resources and Quantum Mining have agreed to merge in an all-stock transaction valued at approximately A$2.8 billion. Under the terms of the agreement, Quantum shareholders will receive 0.42 Phoenix shares for each Quantum share held. The combined entity will operate under the Phoenix Resources name and become the third-largest gold producer in Australia. Both companies' boards have unanimously approved the merger, which is expected to close in the first quarter of 2024..",
+        "article_id": 14,
+        "expected_output": {
+          "article_id": 14,
+          "company_1": "Phoenix Resources",
+          "company_1_ticker": null,
+          "company_2": "Quantum Mining",
+          "company_2_ticker": null,
+          "merged_entity": "Phoenix Resources",
+          "deal_amount": "2.8 billion",
+          "deal_currency": "AUD",
+          "article_type": "merger"
+        }
+      },
+      {
+        "text": "Rock Tech, Arcore to merge subsidiaries to form integrated lithium company\nCanadian miner Rock Tech Lithium has signed a binding business combination agreement with Swiss junior mining company Arcore to merge their subsidiaries and establish a new European entity named NewCo. Upon completion of the transaction, Rock Tech will transfer the shares of its fully owned subsidiary, Rock Tech Guben, to NewCo in exchange for a 75% stake in NewCo’s registered share capital. Arcore will contribute the shares of its wholly owned subsidiary, AR CORE, to NewCo and receive a 25% stake in NewCo’s registered share capital. This strategic move aims to reduce Europe’s dependence on other regions for critical battery raw materials and create a reliable battery materials supply chain. NewCo’s core assets will include Rock Tech’s fully permitted lithium converter in Guben, Germany, and Arcore’s lithium-boron-magnesium mining project in Lopare, Bosnia-Herzegovina, which contains an estimated 600,000 tonnes of lithium carbonate equivalent.",
+        "article_id": 12,
+        "expected_output": {
+          "article_id": 12,
+          "company_1": "Rock Tech Lithium",
+          "company_1_ticker": null,
+          "company_2": "Arcore",
+          "company_2_ticker": null,
+          "merged_entity": "NewCo",
+          "deal_amount": null,
+          "deal_currency": "Unknown",
+          "article_type": "merger"
+        }
+      },
+      {
+        "text": "Ironclad Minerals drops pursuit of Coppercrest Resources\nIronclad Minerals has shelved its proposed takeover of Coppercrest Resources after due diligence revealed escalating remediation liabilities. The companies had been in exclusive negotiations since February but failed to agree on revised terms. Ironclad executives said they will instead redirect capital toward organic mine expansions in Western Australia. Coppercrest shares fell 9% on the news as investors reassessed the standalone turnaround plan..",
+        "article_id": 33,
+        "expected_output": {
+          "article_id": 33,
+          "article_type": "other"
+        }
+      }
+    ],
+    "signature": {
+      "instructions": "Extract information about companies involved in a merger deal.\n- If the currency symbol is just \"$\", assume USD.",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Merger Info:",
+          "description": "${merger_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "acquisition_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "Zenith Copper closes $1.4bn takeover of Andean Metals\nZenith Copper Corp. (TSX:ZCC) has finalized its acquisition of Andean Metals S.A. for $1.4 billion in cash and stock. The transaction, first announced in December 2023, adds two producing copper-molybdenum mines in Peru to Zenith's South American portfolio. Andean shareholders received $7.25 per share, a 28% premium to the undisturbed share price.",
+        "acquisition_info": {
+          "article_id": 38,
+          "parent_company": "Zenith Copper Corp.",
+          "parent_company_ticker": [
+            "TSX:ZCC"
+          ],
+          "child_company": "Andean Metals S.A.",
+          "child_company_ticker": null,
+          "deal_amount": "1.4 billion",
+          "deal_currency": "USD",
+          "article_type": "acquisition"
+        }
+      },
+      {
+        "augmented": true,
+        "text": "Greenstone Metals completes purchase of Andes Graphite\nGreenstone Metals has acquired Chilean graphite developer Andes Graphite in an all-stock transaction valued at $410 mn. The acquisition secures Greenstone a high-grade flake graphite project with proven reserves near Copiapó. Greenstone plans to fast-track a modular processing plant to supply battery anode producers in 2026. The company said the deal aligns with its strategy to expand critical minerals output in South America..",
+        "acquisition_info": {
+          "article_id": 25,
+          "parent_company": "Greenstone Metals",
+          "parent_company_ticker": null,
+          "child_company": "Andes Graphite",
+          "child_company_ticker": null,
+          "deal_amount": "410",
+          "deal_currency": "USD",
+          "article_type": "acquisition"
+        }
+      },
+      {
+        "augmented": true,
+        "text": "Meet the world’s third largest lithium supplier\nRio Tinto has finalised its $US6.7 billion ($10.5 billion) acquisition of Arcadium Lithium, positioning the company as a leading lithium supplier. Following approval from the Royal Court of Jersey, Rio Tinto is now the parent company of Arcadium, which will be renamed to Rio Tinto Lithium. Arcadium has been delisted from the ASX and New York Stock Exchange. Backed by one of the world’s largest lithium resource bases, Rio Tinto Lithium aims to grow the capacity of its Tier 1 assets to over 200,000 tonnes of lithium carbonate equivalent per annum by 2028. “Today we are delighted to welcome the employees of Arcadium to Rio Tinto,” Rio Tinto chief executive officer Jakob Stausholm said.",
+        "acquisition_info": {
+          "article_id": 7,
+          "parent_company": "Rio Tinto",
+          "parent_company_ticker": null,
+          "child_company": "Arcadium Lithium",
+          "child_company_ticker": [
+            "ASX",
+            "New York Stock Exchange"
+          ],
+          "deal_amount": "6.7",
+          "deal_currency": "USD",
+          "article_type": "acquisition"
+        }
+      },
+      {
+        "text": "Phoenix Resources and Quantum Mining to merge in A$2.8bn deal\nPhoenix Resources and Quantum Mining have agreed to merge in an all-stock transaction valued at approximately A$2.8 billion. Under the terms of the agreement, Quantum shareholders will receive 0.42 Phoenix shares for each Quantum share held. The combined entity will operate under the Phoenix Resources name and become the third-largest gold producer in Australia. Both companies' boards have unanimously approved the merger, which is expected to close in the first quarter of 2024..",
+        "article_id": 14,
+        "expected_output": {
+          "article_id": 14,
+          "company_1": "Phoenix Resources",
+          "company_1_ticker": null,
+          "company_2": "Quantum Mining",
+          "company_2_ticker": null,
+          "merged_entity": "Phoenix Resources",
+          "deal_amount": "2.8 billion",
+          "deal_currency": "AUD",
+          "article_type": "merger"
+        }
+      },
+      {
+        "text": "Summit Mining rejects Apex Resources' $1.9bn takeover offer\nSummit Mining has rejected an unsolicited takeover proposal from Apex Resources worth $1.9 billion. The offer of $3.20 per share was deemed to significantly undervalue Summit's lithium assets in Western Australia, according to the company's board. Summit Mining chairman David Chen stated that the proposal fails to reflect the strategic value of the company's flagship Pinnacle lithium project. Apex Resources has indicated it may pursue a hostile takeover if Summit continues to reject negotiations..",
+        "article_id": 15,
+        "expected_output": {
+          "article_id": 15,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Ironclad Minerals drops pursuit of Coppercrest Resources\nIronclad Minerals has shelved its proposed takeover of Coppercrest Resources after due diligence revealed escalating remediation liabilities. The companies had been in exclusive negotiations since February but failed to agree on revised terms. Ironclad executives said they will instead redirect capital toward organic mine expansions in Western Australia. Coppercrest shares fell 9% on the news as investors reassessed the standalone turnaround plan..",
+        "article_id": 33,
+        "expected_output": {
+          "article_id": 33,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Geopolitical tensions stall Arctic Metals' Greenland partnership talks\nArctic Metals confirmed that talks with a European defense consortium about co-developing the Nuuk rare earth district have paused amid NATO sanctions deliberations. The parties had exchanged draft memoranda of understanding but never reached exclusivity. Company officials stated they remain open to future collaboration once policy clarity returns. Industry observers caution that any renewed dialogue could take months to restart..",
+        "article_id": 36,
+        "expected_output": {
+          "article_id": 36,
+          "article_type": "other"
+        }
+      },
+      {
+        "text": "Rock Tech, Arcore to merge subsidiaries to form integrated lithium company\nCanadian miner Rock Tech Lithium has signed a binding business combination agreement with Swiss junior mining company Arcore to merge their subsidiaries and establish a new European entity named NewCo. Upon completion of the transaction, Rock Tech will transfer the shares of its fully owned subsidiary, Rock Tech Guben, to NewCo in exchange for a 75% stake in NewCo’s registered share capital. Arcore will contribute the shares of its wholly owned subsidiary, AR CORE, to NewCo and receive a 25% stake in NewCo’s registered share capital. This strategic move aims to reduce Europe’s dependence on other regions for critical battery raw materials and create a reliable battery materials supply chain. NewCo’s core assets will include Rock Tech’s fully permitted lithium converter in Guben, Germany, and Arcore’s lithium-boron-magnesium mining project in Lopare, Bosnia-Herzegovina, which contains an estimated 600,000 tonnes of lithium carbonate equivalent.",
+        "article_id": 12,
+        "expected_output": {
+          "article_id": 12,
+          "company_1": "Rock Tech Lithium",
+          "company_1_ticker": null,
+          "company_2": "Arcore",
+          "company_2_ticker": null,
+          "merged_entity": "NewCo",
+          "deal_amount": null,
+          "deal_currency": "Unknown",
+          "article_type": "merger"
+        }
+      }
+    ],
+    "signature": {
+      "instructions": "Extract information about companies involved in an acquisition deal.\n- If the currency symbol is just \"$\", assume USD.",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Acquisition Info:",
+          "description": "${acquisition_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.4b1",
+      "cloudpickle": "3.1"
+    }
+  }
+}
