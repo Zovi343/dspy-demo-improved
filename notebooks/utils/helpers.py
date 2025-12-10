@@ -38,15 +38,24 @@ def read_data(path: Path) -> list[dict[str, Any]]:
     with open(path, "r") as f:
         return json.load(f)
     
-def visualize_model_scores(models_configs: dict) -> None:
+def visualize_model_scores(
+    models_configs: dict[str, Any], 
+    save_path: Path | str | None = None
+) -> None:
     """
     Creates a side-by-side visualization of train and test scores for each model.
+    
+    Args:
+        models_configs: Dictionary mapping model names to their train/test scores.
+        save_path: Optional path to save the figure as SVG. If None, figure is not saved.
     """
     # Extract data
     model_names = list(models_configs.keys())
     train_scores = [models_configs[m]["train_score"] for m in model_names]
     test_scores = [models_configs[m]["test_score"] for m in model_names]
-    
+
+    model_names = [m.upper() for m in model_names]
+
     # Set up the style
     sns.set_theme(style="whitegrid")
     palette = sns.color_palette("Set2", n_colors=len(model_names))
@@ -57,18 +66,18 @@ def visualize_model_scores(models_configs: dict) -> None:
     # Train scores
     ax1 = axes[0]
     bars1 = ax1.bar(model_names, train_scores, color=palette, edgecolor="black", linewidth=1.2)
-    ax1.set_title("Train Scores", fontsize=14, fontweight="bold")
-    ax1.set_ylabel("Score (%)", fontsize=12)
+    ax1.set_title("Train Scores", fontsize=16, fontweight="bold")
+    ax1.set_ylabel("Score (%)", fontsize=16)
     ax1.set_ylim(0, 100)
-    ax1.bar_label(bars1, fmt="%.2f", fontsize=10, padding=3)
+    ax1.bar_label(bars1, fmt="%.2f", fontsize=12, padding=3)
     
-    # Test scores
+    # Test scores1
     ax2 = axes[1]
     bars2 = ax2.bar(model_names, test_scores, color=palette, edgecolor="black", linewidth=1.2)
-    ax2.set_title("Test Scores", fontsize=14, fontweight="bold")
-    ax2.set_ylabel("Score (%)", fontsize=12)
+    ax2.set_title("Test Scores", fontsize=16, fontweight="bold")
+    ax2.set_ylabel("Score (%)", fontsize=16)
     ax2.set_ylim(0, 100)
-    ax2.bar_label(bars2, fmt="%.2f", fontsize=10, padding=3)
+    ax2.bar_label(bars2, fmt="%.2f", fontsize=12, padding=3)
     
     # Styling
     for ax in axes:
@@ -78,4 +87,45 @@ def visualize_model_scores(models_configs: dict) -> None:
     
     plt.suptitle("Model Performance Comparison", fontsize=16, fontweight="bold", y=1.02)
     plt.tight_layout()
+    
+    # Save figure as SVG if path is provided
+    if save_path is not None:
+        save_path = Path(save_path)
+        if not save_path.suffix:
+            save_path = save_path.with_suffix(".png")
+        fig.savefig(save_path, format="png", bbox_inches="tight")
+    
     plt.show()
+
+
+def combine_programs(gepa_path: str, fewshot_path: str, output_path: str) -> None:
+    """
+    Combines GEPA-optimized instructions with FewShot demos.
+    
+    Args:
+        gepa_path: Path to the GEPA program JSON file
+        fewshot_path: Path to the FewShot program JSON file
+        output_path: Path to save the combined program
+    """
+    # Load both program files
+    with open(gepa_path, "r") as f:
+        gepa_program_dict = json.load(f)
+
+    with open(fewshot_path, "r") as f:
+        fewshot_program_dict = json.load(f)
+
+    # Add demos from fewshot_extractor to gepa_program for each component
+    for component in ["classifier", "merger_extractor", "acquisition_extractor"]:
+        if component in fewshot_program_dict and component in gepa_program_dict:
+            gepa_program_dict[component]["demos"] = fewshot_program_dict[component]["demos"]
+
+    # Save the combined program
+    with open(output_path, "w") as f:
+        json.dump(gepa_program_dict, f, indent=2)
+
+    # Verify the demos were added
+    for component in ["classifier", "merger_extractor", "acquisition_extractor"]:
+        demo_count = len(gepa_program_dict[component]["demos"])
+        print(f"{component}: {demo_count} demos added")
+
+    print(f"\nCombined program saved to: {output_path}")

@@ -1,0 +1,66 @@
+{
+  "classifier": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Analyze the news article and classify it as a merger or acquisition deal.\n- A merger is when two companies combine to form a new entity.\n- An acquisition is when one company takes over another.\n- If it mentions a potential, rumored or failed deal, classify it as \"Other\".",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Article Type:",
+          "description": "${article_type}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "merger_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Task: Extract detailed information about companies involved in a merger deal from a given text.\n\nInstructions:\n1. Identify and extract the names of the two companies involved in the merger. These should be labeled as 'company_1' and 'company_2'.\n2. If available, extract the stock ticker symbols for each company. These should be labeled as 'company_1_ticker' and 'company_2_ticker'. If no ticker is mentioned, return 'None'.\n3. Determine the name of the merged entity, if specified, and label it as 'merged_entity'.\n4. Extract the total deal amount and ensure it is presented without the currency symbol. For example, if the text states \"A$2.8 billion\", extract it as '2.8 billion'.\n5. Identify the currency of the deal. If the currency symbol is just \"$\", assume it is USD. Otherwise, use the currency symbol provided (e.g., 'AUD' for A$, 'CAD' for C$).\n6. Label the type of article as 'merger'.\n7. Ensure all extracted information is accurate and formatted correctly according to the feedback provided in previous examples.\n\nOutput Format:\n- article_id: A unique identifier for the article.\n- company_1: Name of the first company.\n- company_1_ticker: Ticker symbol of the first company or 'None'.\n- company_2: Name of the second company.\n- company_2_ticker: Ticker symbol of the second company or 'None'.\n- merged_entity: Name of the merged entity.\n- deal_amount: The numerical value of the deal amount without the currency symbol.\n- deal_currency: The currency of the deal.\n- article_type: The type of article, which should be 'merger'.\n\nExample Output:\narticle_id=XX company_1='Company A' company_1_ticker='TickerA' company_2='Company B' company_2_ticker='TickerB' merged_entity='Merged Company' deal_amount='X billion' deal_currency='Currency' article_type='merger'",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Merger Info:",
+          "description": "${merger_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "acquisition_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Task: Extract and format information about companies involved in an acquisition deal from a given text.\n\nInstructions:\n1. Identify and extract the following information from the provided text:\n   - Parent company (the company making the acquisition)\n   - Child company (the company being acquired)\n   - Deal amount\n   - Deal currency\n   - Article type (should be 'acquisition')\n\n2. For each piece of information:\n   - **Parent Company**: Extract the name of the company that is acquiring another company. This is typically mentioned first in the context of the acquisition.\n   - **Child Company**: Extract the name of the company being acquired. This is typically mentioned after the parent company in the context of the acquisition.\n   - **Deal Amount**: Extract the monetary value of the deal. If the amount is given with a currency symbol, convert it to a numerical format followed by the word 'million' or 'billion' as appropriate. For example, '$410 mn' should be converted to '410 million'.\n   - **Deal Currency**: Determine the currency of the deal. If the currency symbol is just \"$\", assume it is USD.\n   - **Article Type**: This should always be 'acquisition' for this task.\n\n3. If any information is not explicitly mentioned in the text, return 'None' for that field.\n\n4. Format the extracted information as follows:\n   ```\n   article_id=<unique identifier>\n   parent_company='<extracted parent company>'\n   parent_company_ticker=None\n   child_company='<extracted child company>'\n   child_company_ticker=None\n   deal_amount='<formatted deal amount>'\n   deal_currency='<extracted or assumed currency>'\n   article_type='acquisition'\n   ```\n\n5. Ensure that the extracted information is accurate and formatted correctly according to the guidelines provided.\n\n6. Use the context of the text to make logical assumptions where necessary, such as assuming the currency is USD if only the \"$\" symbol is used.\n\nBy following these instructions, you will be able to extract and format the necessary information about acquisition deals accurately and consistently.",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Acquisition Info:",
+          "description": "${acquisition_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.4b1",
+      "cloudpickle": "3.1"
+    }
+  }
+}
