@@ -3,7 +3,7 @@
 [![MlFlow](https://img.shields.io/badge/MlFlow-3.4.0-lightblue?logo=mlflow&logoColor=white)](https://mlflow.org/docs/latest/index.html)
 [![DSPy](https://img.shields.io/badge/DSPy-3.0.3-red?logo=dspy&logoColor=white)](https://dspy.ai/docs/latest/index.html)
 
-This is streamlined and improved version of the original tutorial by [Prashanth Rao](https://www.linkedin.com/in/prrao87/) that he presents in his blog [Learning DSPy](https://thedataquarry.com/blog/learning-dspy-1-the-power-of-good-abstractions/#define-success-metrics). It includes some general code improvements, migration to Jupyter Notebook, integrating MlFlow and implementation of data science best practices and other.
+This is streamlined and improved version of the original tutorial by [Prashanth Rao](https://www.linkedin.com/in/prrao87/) that he presents in his blog [Learning DSPy](https://thedataquarry.com/blog/learning-dspy-1-the-power-of-good-abstractions/#define-success-metrics). It includes some general code improvements, migration to Jupyter Notebook, integrating MlFlow, and implementation of data science best practices and other modifications.
 
 ## Setup
 Install dependencies via [uv](https://docs.astral.sh/uv/getting-started/installation/) as follows:
